@@ -1,0 +1,44 @@
+ import java.util.Arrays;
+
+public class AgeCalculator {
+    public static void main(String[] args) {
+        int[] birthYears = {12, 15, 14, 9, 11};
+        int currentYear = 2024; // Assuming the current year is 2024
+
+        // Calculate ages
+        int[] ages = new int[birthYears.length];
+        for (int i = 0; i < birthYears.length; i++) {
+            ages[i] = currentYear - birthYears[i];
+        }
+
+        // Sort ages in descending order
+        Arrays.sort(ages);
+        reverseArray(ages);
+
+        // Print ages in descending order
+        System.out.println("Ages in descending order:");
+        for (int age : ages) {
+            System.out.println(age);
+        }
+    }
+
+    // Function to reverse an array
+    public static void reverseArray(int[] arr) {
+        int start = 0;
+        int end = arr.length - 1;
+        while (start < end) {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+ }
+}
+}
+Output:
+Ages in descending order:
+2015
+2013
+2012
+2010
+2009
