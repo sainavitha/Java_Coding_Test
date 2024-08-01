@@ -1,5 +1,4 @@
 package activities;
-import java.util.Scanner;
 public class BankAccount 
     {
 	private double balance;
@@ -47,19 +46,15 @@ public class BankAccount
 	public static void main(String[] args)
 	{
 	BankAccount Acc=new BankAccount(1000.00); 
-    System.out.println("Balance: " + Acc.getBalance());
+        System.out.println("Balance: " + Acc.getBalance());
 	Acc.deposit(400.00);
 	System.out.println("balance after deposit is: " +Acc.getBalance());
 	Acc.withdraw(100.00);
 	System.out.println("balancr after withdraw: " +Acc.getBalance());
 	Acc.withdraw(1500.00);
-	 
-    System.out.println("Balance after withdraw: " + Acc.getBalance());
-
+        System.out.println("Balance after withdraw: " + Acc.getBalance());
         // Try to deposit a negative amount
-    Acc.deposit(-100.00);
-    System.out.println("Balance after negative deposit: " + Acc.getBalance());
-
+        Acc.deposit(-100.00);
+        System.out.println("Balance after negative deposit: " + Acc.getBalance());
 }
-
 }
